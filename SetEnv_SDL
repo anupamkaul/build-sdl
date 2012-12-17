@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#WLD=$HOME/wayland-install   # change this to another location if you prefer
+WLD=/usr/local   # change this to another location if you prefer
+LD_LIBRARY_PATH=$WLD/lib
+PKG_CONFIG_PATH=$WLD/lib/pkgconfig/:$WLD/share/pkgconfig/
+ACLOCAL="aclocal -I $WLD/share/aclocal"
+
+export WLD LD_LIBRARY_PATH PKG_CONFIG_PATH ACLOCAL
+
+# Set XDG_RUNTIME_DIR
+mkdir -p $HOME/.xdg
+export XDG_RUNTIME_DIR=$HOME/.xdg
+
+# Debug variables for egl, wayland etc
+export MESA_DEBUG=1
+export EGL_LOG_LEVEL=debug
+export LIBGL_DEBUG=verbose
+export WAYLAND_DEBUG=1
+
+# Set path for running weston
+export PATH=$WLD/bin:$PATH
+
+

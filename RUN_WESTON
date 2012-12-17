@@ -1,0 +1,1 @@
+weston --backend=$WLD/lib/weston/x11-backend.so&

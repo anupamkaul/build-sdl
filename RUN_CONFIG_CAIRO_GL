@@ -1,0 +1,1 @@
+./autogen.sh --prefix=$WLD --enable-gl --enable-xcb
