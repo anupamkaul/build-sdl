@@ -1,0 +1,5 @@
+git submodule foreach --recursive "git clean -dfx"
+
+git pull
+git submodule sync
+git submodile update --recursive
