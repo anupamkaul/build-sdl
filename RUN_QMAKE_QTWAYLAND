@@ -1,0 +1,1 @@
+qmake "CONFIG+=config_xcomposite config_glx"

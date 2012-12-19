@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export QTVER=qt5
+export QTDIR=/home/anupam/EXTERNAL/QT5_COMPOSITOR/$QTVER/qtbase
+export PATH=$QTDIR/bin/:$PATH
+export LD_LIBRARY_PATH=$QTDIR/lib/:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=$QTDIR/lib/pkgconfig/:$PKG_CONFIG_PATH
+export QT_PLUGIN_PATH=$QTDIR/lib/plugins/
+
+# for running wayland compositors and clients
+export XDG_RUNTIME_DIR=$HOME/.xdg
