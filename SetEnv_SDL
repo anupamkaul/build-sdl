@@ -1,12 +1,22 @@
 #!/bin/bash
 
 #WLD=$HOME/wayland-install   # change this to another location if you prefer
-WLD=/usr/local   # change this to another location if you prefer
+#WLD=/usr/local   # change this to another location if you prefer
+WLD=$HOME/install-x11-wayland   # change this to another location if you prefer
 LD_LIBRARY_PATH=$WLD/lib
 PKG_CONFIG_PATH=$WLD/lib/pkgconfig/:$WLD/share/pkgconfig/
 ACLOCAL="aclocal -I $WLD/share/aclocal"
 
 export WLD LD_LIBRARY_PATH PKG_CONFIG_PATH ACLOCAL
+
+sudo mkdir -p $WLD/share/aclocal 
+sudo mkdir -p $WLD/lib/pkgconfig 
+sudo mkdir -p $WLD/bin 
+sudo mkdir -p $WLD/include 
+
+sudo find $WLD/lib -type d -exec chmod 775 {} \;
+sudo find $WLD/bin -type d -exec chmod 775 {} \;
+sudo find $WLD/include -type d -exec chmod 775 {} \;
 
 # Set XDG_RUNTIME_DIR
 mkdir -p $HOME/.xdg

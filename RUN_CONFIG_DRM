@@ -1,4 +1,4 @@
 . ../build-sdl/SetEnv_SDL
-./autogen.sh --prefix=$WLD --enable-gl --enable-xcb
+./autogen.sh --prefix=$WLD
 make -j4
 sudo make install

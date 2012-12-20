@@ -1,0 +1,8 @@
+. ../build-sdl/SetEnv_SDL
+./autogen.sh --prefix=$WLD
+make -j4
+sudo make install
+sudo mkdir -p ~/.config
+sudo cp weston.ini ~/.config/
+weston&
+

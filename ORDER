@@ -1,0 +1,8 @@
+wayland
+drm
+mesa
+pixman
+cairo
+weston
+libsdl-wayland
+
